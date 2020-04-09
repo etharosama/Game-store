@@ -1,6 +1,7 @@
 //CardTotal
 import React from 'react';
 import { BodyButton , BodyButton_v2  } from './styled/Button.js'
+import PayPelButon from './PayPelButon'
 
 class CardTotal extends React.Component {
   render(){
@@ -21,10 +22,17 @@ class CardTotal extends React.Component {
         style={{fontSize: '1.06rem'}}>
        <span className ='text-litte-red text-uppercase'>total price : </span>{Math.floor(totalPrice)} LE</p>
 
-       < BodyButton onClick={Clear} style={{fontSize: '1.06rem'}} className = ''>Clear Card</ BodyButton >
-       < BodyButton_v2   className = 'd-block mx-0'>
-        <i class="fab fa-paypal mx-1"></i> get Your games now
-       </ BodyButton_v2   >
+       < BodyButton onClick={Clear}
+       style={{fontSize: '1.06rem'}}
+       className = ''>
+         Clear Card
+       </ BodyButton >
+
+       <div className='my-2'>
+       <PayPelButon  total={totalPrice} onSuccess={Clear} history ={this.props.history} />
+
+       </div>
+
       </div>
     )
   }

@@ -18,7 +18,7 @@ class Card extends React.Component {
         <Titel  name = 'Your' title=' Wishes' />
         <ColCard/>
         <CardList {...this.props}/>
-        <CardTotal {...this.props}/>
+        <CardTotal {...this.props} />
       </section>
     )
   }

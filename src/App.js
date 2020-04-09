@@ -17,7 +17,7 @@ function App() {
       <Switch>
         <Route exact path= '/' render={()=><ProductList/>}/>
         <Route exact path= '/details/:id' render={()=><Details/>}/>
-        <Route exact path= '/Cart' render={()=><Card/>}/>
+        <Route exact path= '/Cart' render={(router)=><Card {...router}/>}/>
         <Route  path="*" render={(router)=><Defulte {...router}/>}/>
       </Switch>
       <Model/>
